@@ -1,0 +1,17 @@
+{
+  "files.exclude": {
+    "**/.git": true,
+    "**/.svn": true,
+    "**/.hg": true,
+    "**/CVS": true,
+    "**/.DS_Store": true,
+    "**/Thumbs.db": true,
+    "**/.venv": true
+  },
+  "editor.defaultFormatter": "charliermarsh.ruff",
+  "editor.formatOnPaste": false,
+  "editor.formatOnSave": true,
+  "python.analysis.extraPaths": [
+    "${workspaceFolder}/roborio"
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "name": "FROG 3160 - 2027 BioCore",
+  "image": "mcr.microsoft.com/devcontainers/python:3.12-bookworm",
+  
+  "features": {
+    // Provides a virtual desktop (noVNC) in the browser to view the RobotPy Simulation GUI
+    "ghcr.io/devcontainers/features/desktop-lite:1": {}
+  },
+
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-python.python",
+        "ms-python.vscode-pylance",
+        "ms-python.debugpy",
+        "ms-python.black-formatter",
+        "charliermarsh.ruff",
+        "ms-python.mypy-type-checker",
+        "donjayamanne.python-environment-manager",
+        "actboy168.tasks",
+        "usernamehw.errorlens",
+        "tamasfe.even-better-toml",
+        "eamodio.gitlens",
+        "GitHub.vscode-pull-request-github",
+        "GitHub.remotehub",
+        "ms-vsliveshare.vsliveshare",
+        "wpilib.wpilib-vscode"
+      ],
+      "settings": {
+        "python.defaultInterpreterPath": "/usr/local/bin/python",
+        "python.analysis.extraPaths": [
+          "${workspaceFolder}/roborio"
+        ],
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "charliermarsh.ruff"
+      }
+    }
+  },
+
+  // Setup system GUI dependencies and install RobotPy & dependencies from pyproject.toml
+  "postCreateCommand": "bash .devcontainer/post-create.sh",
+
+  // Forward the noVNC web desktop port (6080) for simulation viewing
+  "forwardPorts": [6080],
+  "portsAttributes": {
+    "6080": {
+      "label": "Robot Simulator Desktop (noVNC)",
+      "onAutoForward": "openBrowser"
+    }
+  }
+}

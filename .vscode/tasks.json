@@ -1,0 +1,44 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "RobotPy Sync",
+      "type": "shell",
+      "command": "python -m robotpy sync",
+      "options": {
+        "cwd": "${workspaceFolder}/roborio",
+        "statusbar": {
+          "color": "#0F0",
+          "label": "$(refresh) Sync/Update"
+        }
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "RobotPy Sim",
+      "type": "shell",
+      "command": "python robot.py sim",
+      "options": {
+        "cwd": "${workspaceFolder}/roborio",
+        "statusbar": {
+          "color": "#0F0",
+          "label": "$(play) Run Simulator"
+        }
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "RobotPy Deploy",
+      "type": "shell",
+      "command": "python -m robotpy deploy",
+      "options": {
+        "cwd": "${workspaceFolder}/roborio",
+        "statusbar": {
+          "color": "#0F0",
+          "label": "$(arrow-down) Deploy to Robot"
+        }
+      },
+      "problemMatcher": []
+    }
+  ]
+}
