@@ -56,7 +56,8 @@ For detailed instructions, simulation tips, and local setup, see [DEVELOPER.md](
 ├── DEVELOPER.md               # Student & developer guide for Codespaces / Simulation
 └── README.md                  # Project overview
 ```
-
 Code Authors:
 Brian Jarrett
 Kerian Bosque
+Levi Cantrell
+
